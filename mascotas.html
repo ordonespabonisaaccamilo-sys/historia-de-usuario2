@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería de Mascotas | Isaac – Dev</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- =============================================
+       HEADER — Flexbox reutilizado desde style.css
+       ============================================= -->
+  <header class="header">
+    <div class="header__logo">
+      <span class="header__logo-bracket">[</span>isaac<span class="header__logo-accent">_dev</span><span class="header__logo-bracket">]</span>
+    </div>
+    <nav class="header__nav">
+      <a href="index.html" class="nav__link">Inicio</a>
+      <a href="index.html#sobre-mi" class="nav__link">Sobre mí</a>
+      <a href="index.html#proyectos" class="nav__link">Proyectos</a>
+      <a href="mascotas.html" class="nav__link nav__link--active">Galería</a>
+      <a href="index.html#contacto" class="nav__link nav__link--cta">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- =============================================
+       HERO DE GALERÍA
+       ============================================= -->
+  <section class="galeria-hero">
+    <h1 class="galeria-hero__title">Galería de Mascotas</h1>
+    <p class="galeria-hero__sub">
+      Una colección de animales adorables — organizados con Flexbox y CSS Grid.
+    </p>
+
+    <!-- Filtros de layout — Flexbox para alinear los botones -->
+    <div class="galeria__controles">
+      <button class="filtro-btn filtro-btn--activo" onclick="cambiarLayout('flex')">
+        ▦ Flexbox
+      </button>
+      <button class="filtro-btn" onclick="cambiarLayout('grid')">
+        ⊞ Grid Mosaico
+      </button>
+    </div>
+  </section>
+
+  <!-- =============================================
+       GALERÍA — TASK 4
+       Layout 1: Flexbox (display:flex; flex-wrap:wrap)
+       Layout 2: Grid (display:grid; grid-template-columns)
+       ============================================= -->
+  <section class="galeria" id="galeria">
+
+    <!-- 
+      LAYOUT FLEXBOX:
+      display: flex; flex-wrap: wrap; justify-content: center; gap: ...
+      Las tarjetas se distribuyen en filas y se adaptan al ancho disponible.
+    -->
+    <div class="galeria__flex" id="galeria-flex">
+
+      <!-- Tarjeta 1 — Gato -->
+      <div class="mascota-card">
+        <div class="mascota-card__img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=300&fit=crop"
+            alt="Gato naranja mirando a la cámara"
+            class="mascota-card__img"
+            loading="lazy"
+          />
+        </div>
+        <div class="mascota-card__info">
+          <h3 class="mascota-card__nombre">Manchas</h3>
+          <p class="mascota-card__tipo">🐱 Gato</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 — Perro -->
+      <div class="mascota-card">
+        <div class="mascota-card__img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop"
+            alt="Perro golden retriever en campo verde"
+            class="mascota-card__img"
+            loading="lazy"
+          />
+        </div>
+        <div class="mascota-card__info">
+          <h3 class="mascota-card__nombre">Max</h3>
+          <p class="mascota-card__tipo">🐶 Perro</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 — Conejo -->
+      <div class="mascota-card">
+        <div class="mascota-card__img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&h=300&fit=crop"
+            alt="Conejo blanco y esponjoso"
+            class="mascota-card__img"
+            loading="lazy"
+          />
+        </div>
+        <div class="mascota-card__info">
+          <h3 class="mascota-card__nombre">Nieve</h3>
+          <p class="mascota-card__tipo">🐰 Conejo</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4 — Loro -->
+      <div class="mascota-card">
+        <div class="mascota-card__img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400&h=300&fit=crop"
+            alt="Loro colorido posado en rama"
+            class="mascota-card__img"
+            loading="lazy"
+          />
+        </div>
+        <div class="mascota-card__info">
+          <h3 class="mascota-card__nombre">Pico</h3>
+          <p class="mascota-card__tipo">🦜 Loro</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 5 — Hamster -->
+      <div class="mascota-card">
+        <div class="mascota-card__img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=400&h=300&fit=crop"
+            alt="Hamster dorado con mejillas llenas"
+            class="mascota-card__img"
+            loading="lazy"
+          />
+        </div>
+        <div class="mascota-card__info">
+          <h3 class="mascota-card__nombre">Bolitas</h3>
+          <p class="mascota-card__tipo">🐹 Hamster</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 6 — Tortuga -->
+      <div class="mascota-card">
+        <div class="mascota-card__img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=400&h=300&fit=crop"
+            alt="Tortuga marina nadando"
+            class="mascota-card__img"
+            loading="lazy"
+          />
+        </div>
+        <div class="mascota-card__info">
+          <h3 class="mascota-card__nombre">Shelby</h3>
+          <p class="mascota-card__tipo">🐢 Tortuga</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 7 — Pez -->
+      <div class="mascota-card">
+        <div class="mascota-card__img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1544552866-d3ed42536cfd?w=400&h=300&fit=crop"
+            alt="Pez betta de colores en acuario"
+            class="mascota-card__img"
+            loading="lazy"
+          />
+        </div>
+        <div class="mascota-card__info">
+          <h3 class="mascota-card__nombre">Splash</h3>
+          <p class="mascota-card__tipo">🐠 Pez</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 8 — Gato atigrado -->
+      <div class="mascota-card">
+        <div class="mascota-card__img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&h=300&fit=crop"
+            alt="Gato atigrado de ojos verdes"
+            class="mascota-card__img"
+            loading="lazy"
+          />
+        </div>
+        <div class="mascota-card__info">
+          <h3 class="mascota-card__nombre">Tigre</h3>
+          <p class="mascota-card__tipo">🐱 Gato</p>
+        </div>
+      </div>
+
+    </div><!-- /galeria__flex -->
+
+
+    <!-- 
+      LAYOUT GRID MOSAICO:
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) con algunas celdas
+      usando grid-column / grid-row para efecto mosaico.
+      Oculto por defecto, se activa con JS al pulsar el botón.
+    -->
+    <div class="galeria__grid" id="galeria-grid" style="display:none;">
+
+      <div class="mosaico-item mosaico-item--grande">
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=500&fit=crop" alt="Manchas el gato" loading="lazy" />
+        <span class="mosaico-label">Manchas 🐱</span>
+      </div>
+
+      <div class="mosaico-item">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop" alt="Max el perro" loading="lazy" />
+        <span class="mosaico-label">Max 🐶</span>
+      </div>
+
+      <div class="mosaico-item">
+        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&h=300&fit=crop" alt="Nieve el conejo" loading="lazy" />
+        <span class="mosaico-label">Nieve 🐰</span>
+      </div>
+
+      <div class="mosaico-item">
+        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400&h=300&fit=crop" alt="Pico el loro" loading="lazy" />
+        <span class="mosaico-label">Pico 🦜</span>
+      </div>
+
+      <div class="mosaico-item mosaico-item--ancho">
+        <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=700&h=300&fit=crop" alt="Bolitas el hamster" loading="lazy" />
+        <span class="mosaico-label">Bolitas 🐹</span>
+      </div>
+
+      <div class="mosaico-item">
+        <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=400&h=300&fit=crop" alt="Shelby la tortuga" loading="lazy" />
+        <span class="mosaico-label">Shelby 🐢</span>
+      </div>
+
+      <div class="mosaico-item">
+        <img src="https://images.unsplash.com/photo-1544552866-d3ed42536cfd?w=400&h=300&fit=crop" alt="Splash el pez" loading="lazy" />
+        <span class="mosaico-label">Splash 🐠</span>
+      </div>
+
+      <div class="mosaico-item">
+        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&h=300&fit=crop" alt="Tigre el gato atigrado" loading="lazy" />
+        <span class="mosaico-label">Tigre 🐱</span>
+      </div>
+
+    </div><!-- /galeria__grid -->
+
+  </section>
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer class="footer">
+    <p>© 2025 Isaac · Portafolio Semana 2 · Bootcamp RIWI</p>
+    <nav class="footer__nav">
+      <a href="index.html">Inicio</a>
+      <a href="mascotas.html">Galería</a>
+    </nav>
+  </footer>
+
+  <!-- Script para alternar entre Flexbox y Grid -->
+  <script>
+    /* 
+      cambiarLayout(tipo)
+      Alterna la visibilidad entre el contenedor Flexbox
+      y el contenedor Grid, y actualiza el estilo del botón activo.
+    */
+    function cambiarLayout(tipo) {
+      const flexContainer = document.getElementById('galeria-flex');
+      const gridContainer = document.getElementById('galeria-grid');
+      const botones = document.querySelectorAll('.filtro-btn');
+
+      if (tipo === 'flex') {
+        flexContainer.style.display = 'flex';
+        gridContainer.style.display = 'none';
+        botones[0].classList.add('filtro-btn--activo');
+        botones[1].classList.remove('filtro-btn--activo');
+      } else {
+        flexContainer.style.display = 'none';
+        gridContainer.style.display = 'grid';
+        botones[0].classList.remove('filtro-btn--activo');
+        botones[1].classList.add('filtro-btn--activo');
+      }
+    }
+  </script>
+
+</body>
+</html>

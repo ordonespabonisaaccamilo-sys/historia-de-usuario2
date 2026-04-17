@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio | Isaac – Dev</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Bebas Neue (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- =============================================
+       HEADER — Flexbox: justify-content + align-items
+       ============================================= -->
+  <header class="header">
+    <!-- Logo / nombre -->
+    <div class="header__logo">
+      <span class="header__logo-bracket">[</span>isaac<span class="header__logo-accent">_dev</span><span class="header__logo-bracket">]</span>
+    </div>
+
+    <!-- Navegación distribuida con flexbox -->
+    <nav class="header__nav">
+      <a href="index.html" class="nav__link nav__link--active">Inicio</a>
+      <a href="#sobre-mi" class="nav__link">Sobre mí</a>
+      <a href="#proyectos" class="nav__link">Proyectos</a>
+      <a href="mascotas.html" class="nav__link">Galería</a>
+      <a href="#contacto" class="nav__link nav__link--cta">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- =============================================
+       HERO
+       ============================================= -->
+  <section class="hero">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Desarrollador Web en formación</p>
+      <h1 class="hero__title">
+        Código.<br />Diseño.<br /><span class="hero__title-accent">Soluciones.</span>
+      </h1>
+      <p class="hero__desc">
+        Construyendo interfaces limpias y funcionales, semana a semana,
+        línea por línea.
+      </p>
+      <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+    </div>
+
+    <!-- Decoración geométrica -->
+    <div class="hero__deco" aria-hidden="true">
+      <div class="deco-square deco-square--1"></div>
+      <div class="deco-square deco-square--2"></div>
+      <div class="deco-circle"></div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SOBRE MÍ
+       ============================================= -->
+  <section id="sobre-mi" class="sobre-mi">
+    <div class="sobre-mi__inner">
+      <div class="sobre-mi__texto">
+        <h2 class="section-title">Sobre mí</h2>
+        <p>
+          Soy estudiante de desarrollo web, aprendiendo a convertir ideas en
+          productos digitales. Me apasionan Python, el diseño limpio y los
+          videojuegos como Elden Ring y Minecraft.
+        </p>
+        <p>
+          Cada semana avanzo un paso más: esta semana, dominar
+          <strong>Flexbox</strong> y <strong>CSS Grid</strong>.
+        </p>
+      </div>
+
+      <!-- Habilidades en grid de chips -->
+      <div class="habilidades">
+        <span class="chip">HTML5</span>
+        <span class="chip">CSS3</span>
+        <span class="chip">Flexbox</span>
+        <span class="chip">CSS Grid</span>
+        <span class="chip">Python</span>
+        <span class="chip">Git</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       PROYECTOS — CSS Grid Layout (TASK 3)
+       ============================================= -->
+  <section id="proyectos" class="proyectos">
+    <h2 class="section-title section-title--center">Proyectos</h2>
+    <p class="section-subtitle">Lo que he construido hasta ahora.</p>
+
+    <!-- Contenedor grid: grid-template-columns + gap + grid-area -->
+    <div class="proyectos__grid">
+
+      <!-- Tarjeta destacada — ocupa 2 columnas con grid-area -->
+      <article class="card card--featured">
+        <div class="card__tag">Semana 2 · Destacado</div>
+        <h3 class="card__title">Portafolio v2</h3>
+        <p class="card__desc">
+          Rediseño completo del portafolio aplicando Flexbox en el header
+          y CSS Grid en la sección de proyectos. Layout responsivo y limpio.
+        </p>
+        <div class="card__footer">
+          <span class="card__tech">HTML</span>
+          <span class="card__tech">CSS Grid</span>
+          <span class="card__tech">Flexbox</span>
+        </div>
+      </article>
+
+      <!-- Tarjeta 2 -->
+      <article class="card">
+        <div class="card__tag">Semana 1</div>
+        <h3 class="card__title">Portafolio v1</h3>
+        <p class="card__desc">
+          Primera versión del portafolio personal con HTML semántico,
+          galería de mascotas y página de contacto.
+        </p>
+        <div class="card__footer">
+          <span class="card__tech">HTML</span>
+          <span class="card__tech">CSS</span>
+        </div>
+      </article>
+
+      <!-- Tarjeta 3 -->
+      <article class="card">
+        <div class="card__tag">Python · Bootcamp</div>
+        <h3 class="card__title">Sistema de Estudiantes</h3>
+        <p class="card__desc">
+          App de consola en Python para registrar, buscar y gestionar
+          estudiantes usando diccionarios y funciones.
+        </p>
+        <div class="card__footer">
+          <span class="card__tech">Python</span>
+          <span class="card__tech">Diccionarios</span>
+        </div>
+      </article>
+
+      <!-- Tarjeta 4 -->
+      <article class="card">
+        <div class="card__tag">Python · Semana 3</div>
+        <h3 class="card__title">Log de Persistencia</h3>
+        <p class="card__desc">
+          CRUD sobre archivos de texto para guardar registros de actividad
+          de forma permanente entre sesiones.
+        </p>
+        <div class="card__footer">
+          <span class="card__tech">Python</span>
+          <span class="card__tech">Archivos</span>
+        </div>
+      </article>
+
+      <!-- Tarjeta 5 -->
+      <article class="card">
+        <div class="card__tag">Python · Juego</div>
+        <h3 class="card__title">Trivia Elden Ring</h3>
+        <p class="card__desc">
+          Juego de preguntas en Python con carga desde JSON, preguntas
+          aleatorias y ranking guardado en CSV.
+        </p>
+        <div class="card__footer">
+          <span class="card__tech">Python</span>
+          <span class="card__tech">JSON</span>
+          <span class="card__tech">CSV</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- =============================================
+       CONTACTO
+       ============================================= -->
+  <section id="contacto" class="contacto">
+    <h2 class="section-title section-title--center">Contacto</h2>
+    <p class="section-subtitle">¿Tienes un proyecto o idea? Hablemos.</p>
+    <div class="contacto__links">
+      <a href="mailto:isaac@correo.com" class="btn btn--outline">✉ Email</a>
+      <a href="https://github.com/" target="_blank" class="btn btn--outline">⌥ GitHub</a>
+    </div>
+  </section>
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer class="footer">
+    <p>© 2025 Isaac · Portafolio Semana 2 · Bootcamp RIWI</p>
+    <nav class="footer__nav">
+      <a href="index.html">Inicio</a>
+      <a href="mascotas.html">Galería</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
